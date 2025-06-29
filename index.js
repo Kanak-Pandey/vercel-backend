@@ -1,10 +1,14 @@
 require('dotenv').config();
 
-express = require("express");
+const express = require("express");
 const cors=require("cors");
 const app=express();
 
-app.use(cors());
+app.use(cors({
+  origin: "https://vercel-frontend-1miv-kanak-pandeys-projects.vercel.app",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  credentials: true
+}));
 app.use(express.json());
 
 const port=process.env.PORT || 3000
@@ -17,4 +21,4 @@ app.get("/", (req, res) => {
 
 
 
-app.listen(3000);
+app.listen(port);
