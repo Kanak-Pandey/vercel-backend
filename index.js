@@ -1,5 +1,6 @@
 require('dotenv').config();
- express = require("express");
+
+express = require("express");
 const cors=require("cors");
 const app=express();
 
@@ -13,4 +14,6 @@ app.use("/api/v1", mainRouter);
 
 app.use(express.json());
 
-app.listen(port);
+app.listen(port,()=>{
+    console.log("backend  is up")
+});
