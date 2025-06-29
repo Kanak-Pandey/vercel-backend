@@ -14,6 +14,4 @@ app.use("/api/v1", mainRouter);
 
 app.use(express.json());
 
-app.listen(port,()=>{
-    console.log("backend  is up")
-});
+app.listen(3000);
